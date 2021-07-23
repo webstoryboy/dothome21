@@ -213,22 +213,31 @@
             border: 1px solid #989898;
             padding: 5px;
         }
+        .ol1::before {
+            content: "데이터 저장하기 : ";
+        }
+        .ol2::before {
+            content: "데이터 실행하기 : ";
+        }
+        .ol3::before {
+            content: "데이터 제어하기 : ";
+        }
     </style>
 </head>
 
 <body>
 
     <h1>Javascript 문법 정리</h1>
-    <ol>
+    <ol class="ol1">
         <li><a href="javascript100.html">변수</a></li>
         <li><a href="javascript100.html">상수</a></li>
         <li><a href="javascript100.html">배열(Array)</a></li>
         <li><a href="javascript100.html">객체(Object)</a></li>
     </ol>
-    <ol>
+    <ol class="ol2">
         <li><a href="javascript300.html">함수(function)</a></li>
     </ol>
-    <ol>
+    <ol class="ol3">
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
@@ -342,6 +351,53 @@
     <hr>
     <!-- //sample5 -->
 
+
+    <!-- sample6 -->
+    <div id="sample6" class="sample">
+        <h2>06. 1부터 100까지 합 출력하기 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    for(var i=2; i&lt;=9; i++){
+        for(var j=1; j&lt;=9; j++){
+            var sum = i * j;
+            document.write(i + " * " + j + " = " + sum);
+        }
+    }
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample6 -->
+
+
+    <!-- sample7 -->
+    <div id="sample7" class="sample">
+        <h2>06. 테이블 만들기 <span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let num = 1;
+    let table = "&lt;table&gt;";
+
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+        for( let j=1; j&lt;=10; j++ ){
+            table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
+            num++;
+        }
+        table += "&lt;/tr&gt;";
+    }
+
+    table += "&lt;/table&gt;";
+
+    document.write(table);
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <!-- //sample7 -->
+
     
     
 
@@ -426,7 +482,8 @@
 
 
 
-        //sample100 : 구구단 만들기
+        //sample06 : 
+        //00. 구구단 출력하기
         {
             document.write("*** 05. 구구단 만들기 ***<br>");
             //2~9 for(var i=2; i<=9; i++)
