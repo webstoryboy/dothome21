@@ -51,6 +51,35 @@
 
         //for of 문을 이용해서 모든 값을 출력하세요!!
 
+
+
+        {
+            //"함수가 실행되었습니다." (선언적 함수);
+            function func(){
+                document.write("함수가 실행되었습니다.<br>");
+            }
+            func();
+
+            //"함수가 실행되었습니다." (익명 함수);
+            const func2 = function(str){
+                document.write(str);
+            }
+            func2("함수가 실행되었습니다.<br>");
+            func2("함수가 실행되었다.<br>");
+            func2("함수가 실행.<br>");
+
+            //"함수가 실행되었습니다." (매개변수 함수);
+
+            //"함수가 실행되었습니다." (리턴값 함수);
+            function func3(){
+                const str = "함수가 실행되었습니다.<br>";
+                return str;
+            }
+            document.write(func3());
+
+        }
+
+
     </script>
 </body>
 </html>
